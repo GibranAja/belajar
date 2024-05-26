@@ -3,25 +3,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./asset/_ In Top.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Umade.id</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+        .hover-underline-animation {
+  display: inline-block; /* Display inline block */
+  position: relative; /* Set position relative */
+  color: 
+#ffffff; /* Set text color */
+}
+
+.hover-underline-animation:after {
+  content: ''; /* Add content after the element */
+  position: absolute; /* Position absolute for pseudo-element */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initial scale of 0 for underline effect */
+  height: 2px; /* Height of the underline */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  background-color: 
+#ffffff; /* Background color of the underline */
+  transform-origin: bottom right; /* Set transform origin */
+  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
+}
     </style>
 </head>
 <body style="font-family: 'Lato';" class="overflow-x-hidden bg-white font-sans leading-normal tracking-normal">
-    <header class="p-10">
+    <header data-aos="fade-right" data-aos-duration="1500" class="p-10">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="text-black text-4xl ml-4">Umade.id</div>
+            <div class="text-black text-4xl ml-32">Umade.id</div>
                 <div class="absolute left-[770px] w-[900px] h-[900px] rounded-full bg-[#1E1448] flex items-center justify-center">
                     <span class="text-white text-4xl font-bold"></span>
                 </div>
                 <div class="right-72 absolute">
                     <nav class="text-white space-x-10 text-[20px] -right-1">
-                        <a href="#" class="hover:underline">Home</a>
-                        <a href="#" class="hover:underline">About</a>
-                        <a href="#" class="hover:underline">Service</a>
+                        <a href="#" class="hover-underline-animation">Home</a>
+                        <a href="#" class="hover-underline-animation">About</a>
+                        <a href="#" class="hover-underline-animation">Service</a>
                     </nav>
                 </div>
             <div class="flex items-center z-10">
@@ -41,38 +69,139 @@
             <div class="absolute top-[381px] -left-[132px] w-[200px] h-[200px] rounded-full bg-[#03ECAC] flex items-center justify-center">
                 <span class="text-white text-4xl font-bold"></span>
             </div>
-            <div class="md:w-1/2 -mt-32 ml-[227px] text-center md:text-left">
-                <img src="./asset/_ In Top.svg" class="absolute top-20 left-[634px]" alt="">
-                <h1 class="text-4xl md:text-7xl font-[1000] text-gray-900">
+            <!-- Title hero start -->
+            <div class="md:w-1/2 -mt-32 ml-[227px] text-center md:text-left hero-content">
+                <img src="./asset/_ In Top.svg" class="absolute -top-[65px] left-[234px]" alt="">
+                <h1 class="text-4xl md:text-7xl font-[1000] text-gray-900 title">
                     You are <br>  <span class="text-teal-500">is amazing</span>
                 </h1>
-                <p class="absolute top-[310px] ml-36 mt-6  text-[#1D214E] font-bold">
+                <p class="absolute top-[163px] ml-36 mt-6  text-[#1D214E] font-bold subtitle">
                     Professional <span class="text-[#03ECAC]">Social</span> Media Partner For <br> You Or Your Company
                 </p>
-                <div class="relative top-16">
+                <div class="relative top-16 icon-container">
                     <ul class="absolute -top-10"><img src="./asset/1 in 3 _.svg" alt=""></ul>
                     <ul class="absolute -top-5 left-7"><img src="./asset/2 in 3 _.svg" alt=""></ul>
                     <ul class="absolute"><img src="./asset/3 in 3_.svg" alt=""></ul>
                     <div class="absolute left-14 h-[4px] w-[107px] bg-gray-300 rotate-90"></div>
                 </div>
-                <div class="mt-[153px] space-x-4">
-                    <a href="#" class="px-7 py-3 bg-[#1D214E] text-white font-bold rounded-full w-[125px] h-[65px] shadow hover:bg-[#181b3b]">About us</a>
+                <div class="mt-[153px] space-x-4 button-container">
+                    <a href="#" class="px-7 py-3 bg-[#1D214E] text-white font-bold rounded-full w-[125px] h-[65px] shadow hover:bg-white hover:text-[#1D214E] hover:outline hover:outline-[#1D214E] hover:outline-offset-2 transition-colors duration-300">About us</a>
                     <a href="#" class="px-7 py-3 bg-transparent border border-[#1D214E] text-[#1D214E] font-bold rounded-full shadow hover:bg-[#181b3b] hover:text-white">Our Service</a>
                 </div>
             </div>
-            <div class="md:w-1/2 mt-6 md:-mt-10 w-[650px] h-[500px] z-10">
-                <img src="./asset/Img And Mask.svg" alt="Social Media Partner" class="w-full" />
-                <p class="mt-6 text-white text-xl absolute top-[350px] right-[350px] w-[250px] h-[250px] rounded-full bg-[#1E1448] flex items-center justify-center text-center"><span class="absolute top-[73px]">Start from</span> <br> <span class="absolute top-[104px] text-3xl text-[#03ECAC]">10$ / Project</span> <img src="./asset/Frame.svg" class="absolute top-[147px]" alt=""></p>
+            <!-- Title hero end -->
+
+            <!-- Hero Image start-->
+            <div class="md:w-1/2 mt-6 md:-mt-10 w-[650px] h-[500px] z-10 hero-image-container">
+                <img src="./asset/Img And Mask.svg" alt="Social Media Partner" class="w-full hero-image" />
+                <div class="price-container">
+                    <p class="mt-6 text-white text-xl absolute -top-[220px] right-[350px] w-[250px] h-[250px] rounded-full bg-[#1E1448] flex items-center justify-center text-center"><span class="absolute top-[73px]">Start from</span> <br> <span class="absolute top-[104px] text-3xl text-[#03ECAC]">10$ / Project</span> <img src="./asset/Frame.svg" class="absolute top-[147px]" alt=""></p>
+                </div>
             </div>
+
             <div class="absolute top-[441px] left-[1200px] z-20 w-[75px] h-[75px] rounded-full bg-white flex items-center justify-center">
                 <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-90 z-30">
                   <path d="M23.4964 15.2359C24.1661 14.5523 24.1661 13.4422 23.4964 12.7586L14.925 4.00859C14.2554 3.325 13.1679 3.325 12.4982 4.00859C11.8286 4.69219 11.8286 5.80234 12.4982 6.48594L18.15 12.25H1.71429C0.766071 12.25 0 13.032 0 14C0 14.968 0.766071 15.75 1.71429 15.75H18.1446L12.5036 21.5141C11.8339 22.1977 11.8339 23.3078 12.5036 23.9914C13.1732 24.675 14.2607 24.675 14.9304 23.9914L23.5018 15.2414L23.4964 15.2359Z" fill="black"/>
                 </svg>
             </div>
-            <div class="absolute top-[441px] left-[1160px] w-[150px] h-[150px] -z-10 rounded-full bg-[#03ECAC] flex items-center justify-center">
+            <div class="navy-circle absolute top-[441px] left-[1160px] w-[150px] h-[150px] -z-10 rounded-full bg-[#03ECAC] flex items-center justify-center">
                 <span class="text-white text-4xl font-bold"></span>
             </div>
+            <!-- Hero image end -->
         </div>
     </section>
-</body>
-</html>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        gsap.from('header', { duration: 1, y: '-100%', ease: 'bounce' });
+        gsap.from('.text-black', { duration: 1, x: '-100vw', ease: 'power2.out', delay: 0.5 });
+        gsap.from('.right-72', { duration: 1, x: '100vw', ease: 'power2.out', delay: 1 });
+ 
+        // Animasi untuk bagian title hero
+        gsap.from('.hero-content', { duration: 1, y: '100vh', ease: 'power2.out', delay: 1.5 });
+        gsap.from('.title', { duration: 1, x: '-100vw', ease: 'power2.out', delay: 2 });
+        gsap.from('.subtitle', { duration: 1, x: '100vw', ease: 'power2.out', delay: 2.5 });
+        gsap.from('.icon-container ul', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 3, stagger: 0.2 });
+        gsap.from('.button-container a', { duration: 1, y: '100vh', ease: 'power2.out', delay: 3.5, stagger: 0.2 });
+ 
+        // Animasi untuk bagian hero image
+        gsap.from('.hero-image-container', { duration: 1, y: '100vh', ease: 'power2.out', delay: 2.5 });
+        gsap.from('.hero-image', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 3 });
+        gsap.from('.price-container', { duration: 1, rotate: 360, ease: 'power2.out', delay: 3.5 });
+        gsap.from('.absolute:nth-child(10)', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 3.5 });
+        gsap.from('.absolute:nth-child(11)', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 4 });
+ 
+        gsap.from('.absolute:nth-child(2)', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 2.5 });
+        gsap.from('.absolute:nth-child(3)', { duration: 1, scale: 0, ease: 'elastic.out(1, 0.3)', delay: 3 });
+ 
+        const navyCircle = document.querySelector('.navy-circle');
+        const text = navyCircle.querySelector('span');
+ 
+        // Animasi teks
+        gsap.to(text, {
+          duration: 1,
+          text: 'GSAP',
+          ease: 'power2.inOut',
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 1,
+        });
+ 
+        // Animasi rotasi dan guncangan
+        const rotation = gsap.to(navyCircle, {
+          duration: 3,
+          rotation: 360,
+          ease: 'power1.inOut',
+          repeat: -1,
+          yoyoEase: true,
+        });
+ 
+        const shake = gsap.to(navyCircle, {
+          duration: 0.1,
+          x: 10,
+          yoyo: true,
+          repeat: -1,
+          repeatDelay: 0.5,
+        });
+ 
+        // Animasi warna
+        const colors = ['#03ECAC', '#FF4136', '#0074D9', '#FFDC00'];
+        let currentColorIndex = 0;
+ 
+        gsap.to(navyCircle, {
+          duration: 1,
+          repeat: -1,
+          yoyo: true,
+          onRepeat: () => {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            gsap.set(navyCircle, { backgroundColor: colors[currentColorIndex] });
+          },
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+ 
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+ 
+      });
+    </script>
+ </body>
+ </html>
